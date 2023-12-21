@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "nodemon index.js",
     "prod": "node index.js",
+    "build": "npm i",
     "generate": "node generate.js"
   },
   "dependencies": {
+    "@netlify/functions": "^1.6.0",
+    "@types/express": "^4.17.17",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
