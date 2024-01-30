@@ -2,20 +2,19 @@ import { Link } from "react-router-dom"
 import { imgUrl, isEmpty } from "../lib"
 import { CartBtn } from "./CartBtn"
 
-export const ProductCard = ({product, imagePath, isNew = false}) => {
+export const ProductCard = ({product, isNew = false}) => {
     return  <div className="col mt-3">
     <div className="col-12 bg-white text-center h-100 product-item">
         {isNew ? <span className="new">New</span>: null}
         <div className="row h-100">
             <div className="col-12 p-0 mb-3">
-                <Link to={`https://mern-shop-ecommerce.onrender.com/product/${product._id}`}>
-                    {/* <img src={imgUrl(product.images[0])}  */}
-                    <img src={`https://mern-shop-ecommerce.onrender.com/${imagePath}${product.images[0]}`} 
+                <Link to={`/product/${product._id}`}>
+                    <img src={imgUrl(product.images[0])} 
                     className="img-fluid" />
                 </Link>
             </div>
             <div className="col-12 mb-3">
-                <Link to={`https://mern-shop-ecommerce.onrender.com/product/${product._id}`} 
+                <Link to={`/product/${product._id}`} 
                 className="product-name">{product.name}</Link>
             </div>
             <div className="col-12 mb-3">
