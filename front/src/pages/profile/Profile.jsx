@@ -29,7 +29,7 @@ export const Profile = () => {
         ev.preventDefault()
         setLoading(true)
 
-        http.patch('profile/edit-profile', form)
+        http.patch('https://mern-shop-ecommerce.onrender.com/profile/edit-profile', form)
             .then(() => http.get('profile/details'))
             .then(({data}) =>{
                 dispatch(setUser(data))
