@@ -33,7 +33,7 @@ export const Home = () => {
                 </div>
             </div>
 
-            <ProductList title="Featured Products" uri="product/featured" />
+            <ProductList title="Featured Products" uri="https://mern-shop-ecommerce.onrender.com/product/featured" />
 
             <div className="col-12">
                 <hr />
