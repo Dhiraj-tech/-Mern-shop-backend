@@ -27,7 +27,7 @@ export const Product = () => {
 
   useEffect(() => {
     if(Object.keys(product).length) {
-      http.get(`category/${product.category_id}/products`)
+      http.get(`https://mern-shop-ecommerce.onrender.com/category/${product.category_id}/products`)
           .then(({data}) => {
             let list = data.filter(pro => pro._id != product._id)
             setSimilars(list)
