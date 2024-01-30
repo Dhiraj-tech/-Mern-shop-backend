@@ -19,8 +19,9 @@ export const dtFormat = (datetime, format = 'lll') =>
     moment(datetime).format(format)
 
 export const imgUrl = imagePath =>
-    `${import.meta.env.VITE_API_URL}/${imagePath}`
-
+    // `${import.meta.env.VITE_API_URL}/${imagePath}`
+    `${import.meta.env.RENDER_API_URL="https://mern-shop-ecommerce.onrender.com/"}/${imagePath}`
+    
 export const isEmpty = data => 
     ['', null, undefined].includes(data)
 
