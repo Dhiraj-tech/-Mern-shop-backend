@@ -18,7 +18,7 @@ export const Search = () => {
 
     useEffect(() => {
         loadData()
-    }, [query.get('https://mern-shop-ecommerce.onrender.com/term')])
+    }, [query.get('term')])
 
     useEffect(() => {
         let paginated = [...products].splice(offset, perPage)
