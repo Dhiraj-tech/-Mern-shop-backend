@@ -19,7 +19,7 @@ export const dtFormat = (datetime, format = 'lll') =>
     moment(datetime).format(format)
 
 export const imgUrl = imagePath =>
-    `${mern-shop-ecommerce.onrender.com}/${import.meta.env.VITE_API_URL}/${imagePath}`
+    `${import.meta.env.VITE_API_URL}/${imagePath}`
 
 export const isEmpty = data => 
     ['', null, undefined].includes(data)
