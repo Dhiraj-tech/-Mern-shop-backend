@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { imgUrl, isEmpty } from "../lib"
 import { CartBtn } from "./CartBtn"
 
-export const ProductCard = ({product, isNew = false}) => {
+export const ProductCard = ({product, imagePath, isNew = false}) => {
     return  <div className="col mt-3">
     <div className="col-12 bg-white text-center h-100 product-item">
         {isNew ? <span className="new">New</span>: null}
