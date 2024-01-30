@@ -91,14 +91,14 @@ export const Product = () => {
             <div className="col-lg-5 col-md-12 mb-3">
               <div className="col-12 mb-3">
                 <div className="img-large border" style=
-                {{backgroundImage: `url('${imgUrl(imgLarge)}')`}}></div>
+                {{backgroundImage: `https://mern-shop-ecommerce.onrender.com/url('${imgUrl(imgLarge)}')`}}></div>
               </div>
               <div className="col-12">
                 <div className="row">
                     {product.images.map((image, i) => <div
                     className="col-sm-2 col-3" key={i}>
                         <div className="img-small border"
-                          style={{backgroundImage: `url('${imgUrl
+                          style={{backgroundImage: `https://mern-shop-ecommerce.onrender.com/url('${imgUrl
                             (image)}')`.replace(/\\/g, '/') }} onMouseEnter=
                           {() => setImgLarge(image.replace(/\\/g, '/'))} onClick=
                           {() => setImgLarge(image.replace(/\\/g, '/'))}></div>
@@ -111,7 +111,7 @@ export const Product = () => {
             <div className="col-lg-5 col-md-9">
               <div className="col-12 product-name large">
                 {product.name}
-                <small>By <Link to={`/brand/${product.
+                <small>By <Link to={`https://mern-shop-ecommerce.onrender.com/brand/${product.
                   brand_id}`}>{product.brand[0].name}</Link>
                 </small>
               </div>
