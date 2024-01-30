@@ -39,13 +39,13 @@ export const Home = () => {
                 <hr />
             </div>
 
-            <ProductList title="Latest Products" uri="product/latest" />
+            <ProductList title="Latest Products" uri="https://mern-shop-ecommerce.onrender.com/product/latest" />
 
             <div className="col-12">
                 <hr />
             </div>
 
-            <ProductList title="Top Selling Products" uri="product/top-selling" />
+            <ProductList title="Top Selling Products" uri="https://mern-shop-ecommerce.onrender.com/product/top-selling" />
 
             <div className="col-12 py-3 bg-light d-sm-block d-none">
                 <div className="row">

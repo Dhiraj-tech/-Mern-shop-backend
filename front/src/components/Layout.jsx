@@ -26,7 +26,7 @@ export const Layout = () => {
             const token = fromStorage('user_token')
 
             if(!isEmpty(token)) {
-                http.get('profile/details')
+                http.get('https://mern-shop-ecommerce.onrender.com/profile/details')
                     .then(({data}) => {
                         dispatch(setUser(data))
                     })
@@ -92,7 +92,7 @@ export const Layout = () => {
                                 </ul>: 
                                 <ul className="top-nav">
                                     <li>
-                                        <Link to="/profile"><i className="fas fa-user-circle me-2"></i>{user.name}</Link>
+                                        <Link to="https://mern-shop-ecommerce.onrender.com/profile"><i className="fas fa-user-circle me-2"></i>{user.name}</Link>
                                     </li>
                                     <li>
                                         <a href="#" onClick={handleLogout}><i className="fas fa-sign-in-alt me-2"></i>Logout</a>

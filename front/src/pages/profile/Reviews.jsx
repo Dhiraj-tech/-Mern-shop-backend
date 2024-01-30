@@ -10,7 +10,7 @@ export const Reviews = () => {
     useEffect(() => {
         setLoading(true)
 
-        http.get('profile/reviews')
+        http.get('https://mern-shop-ecommerce.onrender.com/profile/reviews')
             .then(({data}) => setReviews(data))
             .catch((err) => {console.log(err)})
             .finally(() => setLoading(false))

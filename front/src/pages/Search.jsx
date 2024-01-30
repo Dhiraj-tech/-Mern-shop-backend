@@ -18,7 +18,7 @@ export const Search = () => {
 
     useEffect(() => {
         loadData()
-    }, [query.get('term')])
+    }, [query.get('https://mern-shop-ecommerce.onrender.com/term')])
 
     useEffect(() => {
         let paginated = [...products].splice(offset, perPage)
@@ -63,9 +63,9 @@ export const Search = () => {
         setLoading(true)
 
         try{
-            let proResp = await http.get(`product/search`,{
+            let proResp = await http.get(`https://mern-shop-ecommerce.onrender.com/product/search`,{
                 params: {
-                    term: query.get('term'),
+                    term: query.get('https://mern-shop-ecommerce.onrender.com/term'),
                 }
             })
             setProducts(proResp.data)
@@ -84,7 +84,7 @@ export const Search = () => {
                 <div className="col-12 py-3">
                     <div className="row">
                         <div className="col-12 text-center text-uppercase">
-                            <h2>Search: '{query.get('term')}'</h2>
+                            <h2>Search: '{query.get('https://mern-shop-ecommerce.onrender.com/term')}'</h2>
                         </div>
                     </div>
                     <div className="row row-cols-xl-6 row-cols-lg-4 row-cols-sm-2">

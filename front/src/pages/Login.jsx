@@ -20,7 +20,7 @@ export const Login = () => {
         ev.preventDefault()
         setLoading(true)
 
-        http.post('login', form)
+        http.post('https://mern-shop-ecommerce.onrender.com/login', form)
             .then(({data}) => {
                 if(['Customer'].includes(data.user.type)){
                     intoStorage('user_token', data.token, remember)

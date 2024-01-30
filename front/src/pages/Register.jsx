@@ -15,7 +15,7 @@ export const Register = () => {
         ev.preventDefault()
         setLoading(true)
 
-        http.post('register', form)
+        http.post('https://mern-shop-ecommerce.onrender.com/register', form)
             .then(() => navigate('/login'))
             .catch(() => {})
             .finally(() => setLoading(false))
