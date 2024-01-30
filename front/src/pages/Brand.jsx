@@ -66,9 +66,9 @@ export const Brand = () => {
         setLoading(true)
 
         try{
-            let catResp = await http.get(`https://mern-shop-ecommerce.onrender.com/brand/${params.id}`)
+            let catResp = await http.get(`brand/${params.id}`)
             setBrand(catResp.data)
-            let proResp = await http.get(`https://mern-shop-ecommerce.onrender.com/brand/${params.id}/products`)
+            let proResp = await http.get(`brand/${params.id}/products`)
             setProducts(proResp.data)
             setCurrentPage(1)
         }catch(e){} finally{

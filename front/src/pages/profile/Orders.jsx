@@ -10,7 +10,7 @@ export const Orders = () => {
     useEffect(() => {
         setLoading(true)
 
-        http.get('https://mern-shop-ecommerce.onrender.com/profile/orders')
+        http.get('profile/orders')
             .then(({data}) => setOrders(data))
             .catch((err) => {console.error(err)})
             .finally(() => setLoading(false))

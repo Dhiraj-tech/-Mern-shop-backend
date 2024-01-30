@@ -30,7 +30,7 @@ export const ProductList = ({uri, title}) => {
                     <Loading /> : 
                     [...products].splice(0,4).map(product => 
                     <ProductCard key={product._id} product={product} isNew={uri == 
-                    'https://mern-shop-ecommerce.onrender.com/product/latest'} />)
+                    'product/latest'} />)
                }
 
               

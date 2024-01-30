@@ -97,7 +97,7 @@ export const Cart = () => {
             })
         }
 
-        http.post('checkout', data)
+        http.post('https://mern-shop-ecommerce.onrender.com/checkout', data)
             .then(() => {
                 dispatch(addToCart(newCart))
                 navigate('/')

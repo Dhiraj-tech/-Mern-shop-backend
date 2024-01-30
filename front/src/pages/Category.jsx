@@ -66,9 +66,9 @@ export const Category = () => {
         setLoading(true)
 
         try{
-            let catResp = await http.get(`https://mern-shop-ecommerce.onrender.com/category/${params.id}`)
+            let catResp = await http.get(`category/${params.id}`)
             setCategory(catResp.data)
-            let proResp = await http.get(`https://mern-shop-ecommerce.onrender.com/category/${params.id}/products`)
+            let proResp = await http.get(`category/${params.id}/products`)
             setProducts(proResp.data)
             setCurrentPage(1)
         }catch(e){} finally{

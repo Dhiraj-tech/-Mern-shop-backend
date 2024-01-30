@@ -9,7 +9,7 @@ export const SearchBox = () => {
     
     useEffect(() => {
         if(!isEmpty(term)){
-            navigate(`https://mern-shop-ecommerce.onrender.com/search?term=${term}`)
+            navigate(`/search?term=${term}`)
         }
 
     }, [term])

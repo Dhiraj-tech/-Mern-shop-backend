@@ -18,7 +18,7 @@ export const Password = () => {
         ev.preventDefault()
         setLoading(true)
 
-        http.patch('https://mern-shop-ecommerce.onrender.com/profile/change-password', form)
+        http.patch('profile/change-password', form)
             .then(() => {
                 toast.info('Your password has been changed. Please log in again')
                 dispatch(clearUser())
