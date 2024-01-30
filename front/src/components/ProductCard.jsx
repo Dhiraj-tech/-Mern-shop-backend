@@ -9,6 +9,7 @@ export const ProductCard = ({product, isNew = false}) => {
         <div className="row h-100">
             <div className="col-12 p-0 mb-3">
                 <Link to={`https://mern-shop-ecommerce.onrender.com/product/${product._id}`}>
+                    {/* <img src={imgUrl(product.images[0])}  */}
                     <img src={`https://mern-shop-ecommerce.onrender.com/${product.images[0]}`} 
                     className="img-fluid" />
                 </Link>
