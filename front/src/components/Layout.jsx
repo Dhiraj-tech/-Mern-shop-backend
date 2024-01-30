@@ -92,7 +92,7 @@ export const Layout = () => {
                                 </ul>: 
                                 <ul className="top-nav">
                                     <li>
-                                        <Link to="https://mern-shop-ecommerce.onrender.com/profile"><i className="fas fa-user-circle me-2"></i>{user.name}</Link>
+                                        <Link to="/profile"><i className="fas fa-user-circle me-2"></i>{user.name}</Link>
                                     </li>
                                     <li>
                                         <a href="#" onClick={handleLogout}><i className="fas fa-sign-in-alt me-2"></i>Logout</a>
@@ -142,7 +142,7 @@ export const Layout = () => {
                                 <div className="row">
                                     <div className="col-12">
                                         <div className="footer-logo">
-                                            <a href="index.html">E-Commerce</a>
+                                            <Link href="/">E-Commerce</Link>
                                         </div>
                                     </div>
                                     <div className="col-12">
