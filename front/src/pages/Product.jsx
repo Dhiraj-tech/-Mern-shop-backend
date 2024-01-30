@@ -27,7 +27,7 @@ export const Product = () => {
 
   useEffect(() => {
     if(Object.keys(product).length) {
-      http.get(`https://mern-shop-ecommerce.onrender.com/category/${product.category_id}/products`)
+      http.get(`category/${product.category_id}/products`)
           .then(({data}) => {
             let list = data.filter(pro => pro._id != product._id)
             setSimilars(list)
@@ -58,7 +58,7 @@ export const Product = () => {
   const loadData = () => {
     setLoadingPage(true);
 
-    http.get(`https://mern-shop-ecommerce.onrender.com/product/${params.id}`)
+    http.get(`product/${params.id}`)
         .then(({ data }) => {
           setProduct(data)
           setImgLarge(data.images[0].replace(/\\/g, '/'))
@@ -70,7 +70,7 @@ export const Product = () => {
     ev.preventDefault()
     setLoading(true)
 
-    http.post(`https://mern-shop-ecommerce.onrender.com/product/${product._id}/review`, form)
+    http.post(`product/${product._id}/review`, form)
       .then(() => {
         loadData()
         ev.target.reset()
@@ -91,14 +91,14 @@ export const Product = () => {
             <div className="col-lg-5 col-md-12 mb-3">
               <div className="col-12 mb-3">
                 <div className="img-large border" style=
-                {{backgroundImage: `https://mern-shop-ecommerce.onrender.com/url('${imgUrl(imgLarge)}')`}}></div>
+                {{backgroundImage: `url('${imgUrl(imgLarge)}')`}}></div>
               </div>
               <div className="col-12">
                 <div className="row">
                     {product.images.map((image, i) => <div
                     className="col-sm-2 col-3" key={i}>
                         <div className="img-small border"
-                          style={{backgroundImage: `https://mern-shop-ecommerce.onrender.com/url('${imgUrl
+                          style={{backgroundImage: `url('${imgUrl
                             (image)}')`.replace(/\\/g, '/') }} onMouseEnter=
                           {() => setImgLarge(image.replace(/\\/g, '/'))} onClick=
                           {() => setImgLarge(image.replace(/\\/g, '/'))}></div>
@@ -111,7 +111,7 @@ export const Product = () => {
             <div className="col-lg-5 col-md-9">
               <div className="col-12 product-name large">
                 {product.name}
-                <small>By <Link to={`https://mern-shop-ecommerce.onrender.com/brand/${product.
+                <small>By <Link to={`/brand/${product.
                   brand_id}`}>{product.brand[0].name}</Link>
                 </small>
               </div>
