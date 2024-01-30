@@ -32,7 +32,7 @@ export const NavBar = () => {
                     <a className="nav-link dropdown-toggle" href="#" id="categories" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
                     <div className="dropdown-menu" aria-labelledby="categories">
                        {categories.map(category => <Link key={category._id}
-                       className="dropdown-item" to={`https://mern-shop-ecommerce.onrender.com/category/${category._id}`}>
+                       className="dropdown-item" to={`category/${category._id}`}>
                         {category.name}</Link>)}
                     </div>
                 </li>
@@ -40,7 +40,7 @@ export const NavBar = () => {
                     <a className="nav-link dropdown-toggle" href="#" id="brands" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brands</a>
                     <div className="dropdown-menu" aria-labelledby="brands">
                     {brands.map(brand => <Link key={brand._id}
-                       className="dropdown-item" to={`https://mern-shop-ecommerce.onrender.com/brand/${brand._id}`}>
+                       className="dropdown-item" to={`brand/${brand._id}`}>
                         {brand.name}</Link>)}
 
                     </div>
