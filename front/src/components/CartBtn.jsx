@@ -30,7 +30,7 @@ export const CartBtn = ({product, qty = 1}) => {
         dispatch(addToCart(temp))
 
         setLoading(false)
-        toast.success(`Product ${product.name} added to cart.`)
+        toast.success(`${product.name} added to cart.`)
 
     }
     
