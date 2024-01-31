@@ -21,7 +21,7 @@ export const Orders = () => {
        return {
             'Details': <ul>
                 {order.details.map(detail => <li key={detail._id}>
-                    {detail.qty} x {detail.product[0].name} @ Rs. {detail.
+                    {detail.qty} x {detail.product[0]?.name} @ Rs. {detail.
                     price} = Rs. {detail.total}
                 </li>)}
             </ul>,

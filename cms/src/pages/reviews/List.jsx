@@ -60,7 +60,7 @@ export const List = () => {
                         ['User', 'Product', 'Comment', 'Rating', 'Created At', 'Updated At']} data={reviews.map(review => {
                             return {
                                 'User': review.user[0].name,
-                                'Product': review.product[0].name,
+                                'Product': review.product[0]?.name,
                                 'Comment': review.comment,
                                 'Rating': review.rating,
                                 'Created At': dtFormat(review.createdAt),

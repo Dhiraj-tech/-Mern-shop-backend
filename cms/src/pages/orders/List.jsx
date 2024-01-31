@@ -72,7 +72,7 @@ export const List = () => {
                                 'User': order.user[0].name,
                                 'Details': <ul>
                                     {order.details.map(detail => <li key={detail._id}>
-                                        {detail.qty} x {detail.product[0].name} @ Rs. 
+                                        {detail.qty} x {detail.product[0]?.name} @ Rs. 
                                         {detail.price} = Rs. {detail.total}
                                     </li>)}
                                 </ul>,

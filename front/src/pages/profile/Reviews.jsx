@@ -19,7 +19,7 @@ export const Reviews = () => {
     return loading ? <Loading /> : <DataTable searchable={['Product',
     'Rating', 'Reviewed At']} sortable={['Product','Rating','Rating', 'Reviewed At']} data={reviews.map(review => {
        return {
-            'Product': review.product[0].name,
+            'Product': review.product[0]?.name,
             'Review': review.comment,
             'Rating': review.rating,
             'Reviewed At': dtFormat(review.createdAt)
