@@ -394,5 +394,9 @@ table td img {
 
 }
 
-
+.menu-image{
+    height: 337px;
+    width: 320px;
+    object-fit: cover;
+}
 

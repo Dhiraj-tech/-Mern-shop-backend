@@ -10,7 +10,7 @@ export const ProductCard = ({product, isNew = false}) => {
             <div className="col-12 p-0 mb-3">
                 <Link to={`/product/${product._id}`}>
                     <img src={imgUrl(product.images[0])} 
-                    className="img-fluid" />
+                    className="menu-image" />
                 </Link>
             </div>
             <div className="col-12 mb-3">
